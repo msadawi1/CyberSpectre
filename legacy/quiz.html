@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="What kind of hacker are you? Take the CyberSpectre quiz to find your archetype and recommended training track.">
+    <title>What kind of hacker are you? — CyberSpectre</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body data-skip-boot="1">
+    <a href="#main" class="skip-link">Skip to content</a>
+    <div class="page">
+        <header class="topbar">
+            <div class="topbar-inner">
+                <a href="index.html" class="logo">
+                    <img src="assets/logo.png" alt="CyberSpectre logo" class="logo-mark" width="40" height="40">
+                    <span class="logo-name">cyberspectre</span>
+                </a>
+                <nav class="topnav" aria-label="Main">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="programs.html">Programs</a>
+                    <a href="events.html">Events</a>
+                    <a href="tools.html">Tools</a>
+                    <a href="enlist.html">Enlist</a>
+                </nav>
+                <div class="topbar-right">
+                    <div class="status-pill">
+                        <span class="status-dot" aria-hidden="true"></span>
+                        <span>INTAKE OPEN</span>
+                    </div>
+                    <a href="enlist.html" class="btn-primary btn-sm">
+                        <span>Enlist now</span>
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span><span></span>
+                </button>
+            </div>
+        </header>
+
+        <main id="main">
+            <section class="page-hero">
+                <div class="breadcrumb">
+                    <span class="home">~</span>
+                    <span class="sep">/</span>
+                    <a href="index.html">cyberspectre</a>
+                    <span class="sep">/</span>
+                    <span class="current">quiz</span>
+                </div>
+                <div class="kicker"><span class="kicker-bar"></span>// PROFILER</div>
+                <h1 class="page-title">
+                    What kind of <span class="hl-mono">hacker</span>
+                    are <span class="hl-italic">you?</span>
+                </h1>
+                <p class="page-subtitle">Six questions. Sixty seconds. Find your archetype and the training track that fits you best — then jump straight into the right pipeline.</p>
+            </section>
+
+            <section class="section">
+                <div class="quiz-stage">
+                    <div class="quiz-progress" id="quiz-progress" role="progressbar">
+                        <span class="qp-text" id="qp-text">QUESTION 01 / 06</span>
+                        <div class="qp-bar"><div class="qp-fill" id="qp-fill"></div></div>
+                    </div>
+
+                    <!-- Q1 -->
+                    <div class="quiz-q active" data-q="0">
+                        <div class="quiz-q-num">// 01 of 06</div>
+                        <h2 class="quiz-q-title">It's Saturday night. Where are you?</h2>
+                        <div class="quiz-options">
+                            <button class="quiz-opt" data-arch="red">Breaking into a virtual network</button>
+                            <button class="quiz-opt" data-arch="blue">Watching SOC dashboards light up</button>
+                            <button class="quiz-opt" data-arch="crypto">Solving a ridiculous math puzzle</button>
+                            <button class="quiz-opt" data-arch="forensic">Reconstructing a digital crime scene</button>
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="quiz-q" data-q="1">
+                        <div class="quiz-q-num">// 02 of 06</div>
+                        <h2 class="quiz-q-title">Pick your weapon.</h2>
+                        <div class="quiz-options">
+                            <button class="quiz-opt" data-arch="web">Burp Suite</button>
+                            <button class="quiz-opt" data-arch="blue">Wireshark</button>
+                            <button class="quiz-opt" data-arch="reverse">Ghidra</button>
+                            <button class="quiz-opt" data-arch="crypto">John the Ripper</button>
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="quiz-q" data-q="2">
+                        <div class="quiz-q-num">// 03 of 06</div>
+                        <h2 class="quiz-q-title">Best way to learn?</h2>
+                        <div class="quiz-options">
+                            <button class="quiz-opt" data-arch="red">Just start breaking things</button>
+                            <button class="quiz-opt" data-arch="forensic">Read the spec, then experiment</button>
+                            <button class="quiz-opt" data-arch="reverse">Tear it apart, see how it works</button>
+                            <button class="quiz-opt" data-arch="web">Find a CTF and brute-force my way through</button>
+                        </div>
+                    </div>
+
+                    <!-- Q4 -->
+                    <div class="quiz-q" data-q="3">
+                        <div class="quiz-q-num">// 04 of 06</div>
+                        <h2 class="quiz-q-title">You discover a real vulnerability. You...</h2>
+                        <div class="quiz-options">
+                            <button class="quiz-opt" data-arch="red">Exploit it (ethically) before it's patched</button>
+                            <button class="quiz-opt" data-arch="blue">Report it and help build a detection rule</button>
+                            <button class="quiz-opt" data-arch="reverse">Reverse the binary to find the root cause</button>
+                            <button class="quiz-opt" data-arch="forensic">Trace its impact across the system</button>
+                        </div>
+                    </div>
+
+                    <!-- Q5 -->
+                    <div class="quiz-q" data-q="4">
+                        <div class="quiz-q-num">// 05 of 06</div>
+                        <h2 class="quiz-q-title">Your hacking aesthetic is...</h2>
+                        <div class="quiz-options">
+                            <button class="quiz-opt" data-arch="red">Hoodie + dark room + green text</button>
+                            <button class="quiz-opt" data-arch="blue">Multiple monitors + alert sounds</button>
+                            <button class="quiz-opt" data-arch="crypto">Whiteboards covered in math</button>
+                            <button class="quiz-opt" data-arch="web">Browser dev tools open, always</button>
+                        </div>
+                    </div>
+
+                    <!-- Q6 -->
+                    <div class="quiz-q" data-q="5">
+                        <div class="quiz-q-num">// 06 of 06</div>
+                        <h2 class="quiz-q-title">Your superpower would be...</h2>
+                        <div class="quiz-options">
+                            <button class="quiz-opt" data-arch="red">Finding the way in</button>
+                            <button class="quiz-opt" data-arch="forensic">Reconstructing what happened</button>
+                            <button class="quiz-opt" data-arch="crypto">Cracking any code in your sleep</button>
+                            <button class="quiz-opt" data-arch="reverse">Reading any binary like a book</button>
+                        </div>
+                    </div>
+
+                    <!-- Result -->
+                    <div class="quiz-result" id="quiz-result">
+                        <div class="qr-archetype-tag" id="qr-tag">// ARCHETYPE IDENTIFIED</div>
+                        <h2 class="qr-name" id="qr-name">Red Teamer</h2>
+                        <p class="qr-desc" id="qr-desc"></p>
+                        <div class="qr-track">
+                            <h4>// RECOMMENDED TRACK</h4>
+                            <div class="qr-track-name" id="qr-track-name"></div>
+                            <p class="qr-track-desc" id="qr-track-desc"></p>
+                        </div>
+                        <div class="qr-actions">
+                            <a href="join.html#contact" class="btn-primary btn-lg">
+                                <span>Apply with this archetype</span>
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </a>
+                            <button class="btn-ghost btn-lg" id="qr-restart">
+                                <span>Take it again</span>
+                            </button>
+                        </div>
+                        <p style="margin-top:2rem;color:var(--text-3);font-family:var(--font-mono);font-size:0.75rem">
+                            // share your archetype: <span id="qr-share-url" style="color:var(--accent-mint)"></span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo logo-lg">
+                        <img src="assets/logo.png" alt="CyberSpectre logo" class="logo-mark" width="48" height="48">
+                        <span class="logo-name">cyberspectre</span>
+                    </a>
+                    <p class="tagline-mark">// PRESENT EVERYWHERE. SEEN NOWHERE.</p>
+                    <p>MMU's elite cybersecurity collective — operating in the shadows, training in the open.</p>
+                </div>
+                <div class="footer-cols">
+                    <div class="fcol">
+                        <h5>Pages</h5>
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="programs.html">Programs</a>
+                        <a href="events.html">Events</a>
+                        <a href="join.html">Join</a>
+                    </div>
+                    <div class="fcol">
+                        <h5>Operations</h5>
+                        <a href="programs.html#training">Training</a>
+                        <a href="programs.html#ctfs">CTFs</a>
+                        <a href="faq.html">FAQ</a>
+                        <a href="join.html#contact">Contact</a>
+                    </div>
+                    <div class="fcol">
+                        <h5>Channels</h5>
+                        <a href="#">Discord</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">GitHub</a>
+                        <a href="#">CTFtime</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 CyberSpectre — MMU Cybersecurity Club</p>
+                <p class="mono">// SECURE · DEFEND · WIN</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const archetypes = {
+            red: {
+                name: 'Red Teamer',
+                desc: "You go in first. You find the way through. You think like an attacker because you are one — but ethical, useful, employed. The blue team appreciates your creativity, even when they're cleaning up after you.",
+                track: 'Ethical Hacking & Penetration Testing',
+                trackDesc: 'Master offensive security — recon, exploitation, post-exploitation. Burp Suite, Metasploit, OSCP-style ops.'
+            },
+            blue: {
+                name: 'Blue Defender',
+                desc: "You see the patterns nobody else sees. Logs, alerts, anomalies — you read them like a novel. The attackers you stop don't even know you exist, which is exactly how you like it.",
+                track: 'Blue Team & SOC Fundamentals',
+                trackDesc: 'Defensive operations, SIEM, threat hunting, incident response. Learn to detect, contain, and report.'
+            },
+            crypto: {
+                name: 'Crypto Cracker',
+                desc: "You see numbers, you see patterns. Ciphers don't intimidate you — they call to you. RSA at 3am? Optimal. The harder the puzzle, the more annoyed you'd be if it was easy.",
+                track: 'CTF Skills & Cryptography',
+                trackDesc: 'Modular arithmetic, classical and modern cryptosystems, hash cracking, RSA/ECDSA/AES playgrounds. Heavy CTF focus.'
+            },
+            forensic: {
+                name: 'Forensic Ghost',
+                desc: "You arrive after the storm. Everyone's panicking, you're calm — there's a story in the disk image, and you know how to read it. Disassembled timelines are your love language.",
+                track: 'Digital Forensics',
+                trackDesc: 'Disk and memory forensics, timeline reconstruction, evidence preservation. Volatility, Autopsy, FTK.'
+            },
+            web: {
+                name: 'Web Phantom',
+                desc: "Your dev tools are always open. Cookies, headers, JWTs — you treat the browser like a debugger. SQLi, XSS, IDOR — they're not vulnerabilities, they're vibes.",
+                track: 'Web & Network Security',
+                trackDesc: 'OWASP Top 10, web app exploitation, modern attack surfaces. Burp Suite + curl + your wits.'
+            },
+            reverse: {
+                name: 'Reverse Engineer',
+                desc: "You read assembly for fun. The compiled output is more interesting than the source. While everyone else asks 'what does it do?' you've already asked 'what does it really do?'",
+                track: 'Reverse Engineering & Binary Exploitation',
+                trackDesc: 'Static and dynamic analysis, x86_64 + ARM, malware unpacking, ROP/heap exploitation. Ghidra, IDA, gdb.'
+            },
+        };
+
+        const totalQ = 6;
+        const scores = { red: 0, blue: 0, crypto: 0, forensic: 0, web: 0, reverse: 0 };
+        let currentQ = 0;
+
+        const qpFill = document.getElementById('qp-fill');
+        const qpText = document.getElementById('qp-text');
+        const updateProgress = () => {
+            const pct = (currentQ / totalQ) * 100;
+            qpFill.style.width = pct + '%';
+            qpText.textContent = `QUESTION ${String(Math.min(currentQ + 1, totalQ)).padStart(2, '0')} / 0${totalQ}`;
+        };
+        updateProgress();
+
+        let advancing = false;
+        document.querySelectorAll('.quiz-opt').forEach(btn => {
+            btn.addEventListener('click', () => {
+                if (advancing) return;
+                advancing = true;
+
+                const arch = btn.dataset.arch;
+                if (arch && scores[arch] !== undefined) scores[arch] += 1;
+
+                const currentEl = document.querySelector(`.quiz-q[data-q="${currentQ}"]`);
+                // Mark selected, disable all options in this question
+                currentEl.querySelectorAll('.quiz-opt').forEach(b => {
+                    b.disabled = true;
+                    if (b !== btn) b.style.opacity = '0.45';
+                });
+                btn.classList.add('selected');
+
+                setTimeout(() => {
+                    currentEl.classList.remove('active');
+                    currentQ++;
+                    updateProgress();
+                    if (currentQ < totalQ) {
+                        document.querySelector(`.quiz-q[data-q="${currentQ}"]`).classList.add('active');
+                    } else {
+                        showResult();
+                    }
+                    advancing = false;
+                }, 320);
+            });
+        });
+
+        const showResult = () => {
+            qpFill.style.width = '100%';
+            qpText.textContent = '// RESULT READY';
+
+            // Find top archetype
+            let top = 'red'; let max = -1;
+            for (const k of Object.keys(scores)) {
+                if (scores[k] > max) { max = scores[k]; top = k; }
+            }
+
+            const a = archetypes[top];
+            document.getElementById('qr-name').textContent = a.name;
+            document.getElementById('qr-desc').textContent = a.desc;
+            document.getElementById('qr-track-name').textContent = a.track;
+            document.getElementById('qr-track-desc').textContent = a.trackDesc;
+            document.getElementById('qr-share-url').textContent =
+                window.location.origin + window.location.pathname + '?archetype=' + top;
+            document.getElementById('quiz-result').classList.add('active');
+        };
+
+        document.getElementById('qr-restart').addEventListener('click', () => {
+            for (const k of Object.keys(scores)) scores[k] = 0;
+            currentQ = 0;
+            advancing = false;
+            document.querySelectorAll('.quiz-opt').forEach(b => {
+                b.classList.remove('selected');
+                b.disabled = false;
+                b.style.opacity = '';
+            });
+            document.querySelectorAll('.quiz-q').forEach(q => q.classList.remove('active'));
+            document.getElementById('quiz-result').classList.remove('active');
+            document.querySelector('.quiz-q[data-q="0"]').classList.add('active');
+            updateProgress();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

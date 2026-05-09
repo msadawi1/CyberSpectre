@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CyberSpectre — MMU's elite cybersecurity collective. Present everywhere. Seen nowhere.">
+    <title>CyberSpectre — MMU Cybersecurity Club</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <!-- flag{welcome_to_the_machine} -- you found the source. -->
+    <!-- Tip: there are 10 flags hidden across this site. Submit them at /flags.html -->
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    <div class="page">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+            <div class="topbar-inner">
+                <a href="index.html" class="logo">
+                    <img src="assets/logo.png" alt="CyberSpectre logo" class="logo-mark" width="40" height="40">
+                    <span class="logo-name">cyberspectre</span>
+                </a>
+                <nav class="topnav" aria-label="Main">
+                    <a href="index.html" class="active">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="programs.html">Programs</a>
+                    <a href="events.html">Events</a>
+                    <a href="tools.html">Tools</a>
+                    <a href="enlist.html">Enlist</a>
+                </nav>
+                <div class="topbar-right">
+                    <div class="status-pill">
+                        <span class="status-dot"></span>
+                        <span>INTAKE OPEN</span>
+                    </div>
+                    <a href="enlist.html" class="btn-primary btn-sm">
+                        <span>Enlist now</span>
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span><span></span>
+                </button>
+            </div>
+        </header>
+
+        <main id="main">
+            <!-- HERO -->
+            <section class="hero hero-v2" id="home">
+                <div class="hero-bg">
+                    <div class="hero-grid-bg"></div>
+                    <div class="hero-planet">
+                        <div class="planet-glow"></div>
+                    </div>
+                    <div class="hero-stars"></div>
+                </div>
+                <div class="hero-inner">
+                    <img src="assets/logo.png" alt="CyberSpectre logo" class="hero-logo">
+
+                    <h1 class="mega-title">
+                        <span class="mt-w">Cyber</span><span class="mt-grad">Spectre</span>
+                    </h1>
+
+                    <p class="mega-desc">We are <span class="md-em">MMU's elite cybersecurity collective.</span> Present everywhere, seen nowhere — CTFs, hands-on workshops, and the team putting MMU on Malaysia's cybersecurity map.</p>
+
+                    <div class="hero-countdown" data-countdown>
+                        <span class="cd-pulse" aria-hidden="true"></span>
+                        <span>// FOUNDING INTAKE CLOSES IN</span>
+                        <strong><span data-cd-days>14</span>d <span data-cd-hours>00</span>h <span data-cd-mins>00</span>m</strong>
+                    </div>
+
+                    <div class="hero-cta-row">
+                        <a href="enlist.html" class="btn-primary btn-lg hero-cta-primary">
+                            <span>Enlist now</span>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                        <a href="about.html" class="manifesto-pill">
+                            <span class="sparkle">✦</span>
+                            <span>Read our manifesto</span>
+                        </a>
+                    </div>
+
+                    <div class="hero-stats-mini">
+                        <div class="hsm">
+                            <span class="hsm-num"><span data-count="121">0</span></span>
+                            <span class="hsm-lbl">surveyed</span>
+                        </div>
+                        <span class="hsm-sep">·</span>
+                        <div class="hsm">
+                            <span class="hsm-num">99.2%</span>
+                            <span class="hsm-lbl">said yes</span>
+                        </div>
+                        <span class="hsm-sep">·</span>
+                        <div class="hsm">
+                            <span class="hsm-num">120<span>+</span></span>
+                            <span class="hsm-lbl">members</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools we train on (logo ticker over planet) -->
+                <div class="hero-clients">
+                    <div class="hc-label">// trained on the tools that matter</div>
+                    <div class="ticker-wrap hc-ticker">
+                        <div class="ticker-track">
+                            <span class="client-logo">KALI LINUX</span>
+                            <span class="client-dot">●</span>
+                            <span class="client-logo">METASPLOIT</span>
+                            <span class="client-dot">●</span>
+                            <span class="client-logo">BURP SUITE</span>
+                            <span class="client-dot">●</span>
+                            <span class="client-logo">NMAP</span>
+                            <span class="client-dot">●</span>
+                            <span class="client-logo">WIRESHARK</span>
+                            <span class="client-dot">●</span>
+                            <span class="client-logo">OWASP</span>
+                            <span class="client-dot">●</span>
+                            <span class="client-logo">VOLATILITY</span>
+                            <span class="client-dot">●</span>
+                            <span class="client-logo">GHIDRA</span>
+                            <span class="client-dot">●</span>
+                            <span class="client-logo">HASHCAT</span>
+                            <span class="client-dot">●</span>
+                            <span class="client-logo">JOHN</span>
+                            <span class="client-dot">●</span>
+                            <!-- duplicate for seamless loop -->
+                            <span class="client-logo">KALI LINUX</span>
+                            <span class="client-dot">●</span>
+                            <span class="client-logo">METASPLOIT</span>
+                            <span class="client-dot">●</span>
+                            <span class="client-logo">BURP SUITE</span>
+                            <span class="client-dot">●</span>
+                            <span class="client-logo">NMAP</span>
+                            <span class="client-dot">●</span>
+                            <span class="client-logo">WIRESHARK</span>
+                            <span class="client-dot">●</span>
+                            <span class="client-logo">OWASP</span>
+                            <span class="client-dot">●</span>
+                            <span class="client-logo">VOLATILITY</span>
+                            <span class="client-dot">●</span>
+                            <span class="client-logo">GHIDRA</span>
+                            <span class="client-dot">●</span>
+                            <span class="client-logo">HASHCAT</span>
+                            <span class="client-dot">●</span>
+                            <span class="client-logo">JOHN</span>
+                            <span class="client-dot">●</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- KALI TERMINAL — moved to its own section -->
+            <section class="section terminal-section">
+                <div class="section-head" style="text-align:center; margin-bottom: 3rem;">
+                    <span class="kicker"><span class="kicker-bar"></span>// LIVE FEED · cyberspectre@mmu</span>
+                    <h2 class="display" style="margin: 0 auto;">
+                        Boot the <span class="hl-mono">spectre.</span>
+                        <span class="hl-italic">See us in action.</span>
+                    </h2>
+                </div>
+                <div class="terminal-section-inner">
+                    <div class="terminal kali-terminal" id="hero-terminal">
+                        <div class="kali-bar">
+                            <div class="terminal-dots"><span></span><span></span><span></span></div>
+                            <div class="kali-tab">
+                                <svg class="kali-dragon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 18 L10 8 L14 14 L18 6 L22 14 L28 8 L26 20 Q22 26 16 26 Q10 26 6 20 Z" fill="currentColor" opacity="0.85"/>
+                                    <circle cx="12" cy="18" r="1.2" fill="#1A1B26"/>
+                                    <circle cx="20" cy="18" r="1.2" fill="#1A1B26"/>
+                                    <path d="M14 22 L18 22" stroke="#1A1B26" stroke-width="1" stroke-linecap="round"/>
+                                </svg>
+                                <span>kali@cyberspectre: ~/ops &nbsp;—&nbsp; zsh</span>
+                            </div>
+                        </div>
+                        <div class="kali-body" id="kali-body">
+                            <div class="kali-row out-row dim">[<span class="ok">~</span>] kali-rolling 2026.1 // ghost-protocol loaded</div>
+                            <div class="kali-row out-row dim">[<span class="ok">~</span>] last login from 10.0.0.04 — but who's counting</div>
+
+                            <div class="kali-row prompt-row"><span class="kb">┌──(</span><span class="ku">kali</span><span class="ka">㉿</span><span class="kh">cyberspectre</span><span class="kb">)-[</span><span class="kp">~</span><span class="kb">]</span></div>
+                            <div class="kali-row cmd-row"><span class="kb">└─</span><span class="kd">$</span> <span class="kcmd">whoami</span></div>
+                            <div class="kali-row hi">hey <span class="wave">👋</span> we're <span style="color:#7AA2F7">CyberSpectre</span> from MMU.</div>
+                            <div class="kali-row out-row dim"># nice to meet you. you found us.</div>
+
+                            <div class="kali-row prompt-row"><span class="kb">┌──(</span><span class="ku">kali</span><span class="ka">㉿</span><span class="kh">cyberspectre</span><span class="kb">)-[</span><span class="kp">~</span><span class="kb">]</span></div>
+                            <div class="kali-row cmd-row"><span class="kb">└─</span><span class="kd">$</span> <span class="kcmd">neofetch</span></div>
+                            <div class="kali-row neo-wrap">
+                                <div class="kali-neofetch">
+                                    <pre class="neo-art">    ╓▄▄▄▄▄╖
+   ▟█▀   ▀█▙
+  ▐█  ◉ ◉  █▌
+  ▐█   ─   █▌
+  ▐█▄▄▄▄▄▄▄█▌
+   █▙█▛█▙█▛
+    ▀  ▀  ▀</pre>
+                                    <div class="neo-info"><span class="k">os</span><span class="sep">::</span><span class="v">Kali GNU/Linux Rolling</span>
+<span class="k">host</span><span class="sep">::</span><span class="v">cyberspectre@mmu</span>
+<span class="k">kernel</span><span class="sep">::</span><span class="v">6.5.0-spectre</span>
+<span class="k">uptime</span><span class="sep">::</span><span class="v">∞ (always watching)</span>
+<span class="k">shell</span><span class="sep">::</span><span class="v">zsh — but spookier</span>
+<span class="k">members</span><span class="sep">::</span><span class="v">120+</span>
+<span class="k">ctfs.q</span><span class="sep">::</span><span class="v">12 / 68% wins</span>
+<span class="k">tagline</span><span class="sep">::</span><span class="v" style="color:#BB9AF7;font-style:italic">present everywhere · seen nowhere</span>
+<span class="k">recruit</span><span class="sep">::</span><span class="bar">▓▓▓▓▓▓▓▓▓<span class="bar-empty">░</span></span> <span class="ok">OPEN</span></div>
+                                </div>
+                            </div>
+
+                            <div class="kali-row prompt-row"><span class="kb">┌──(</span><span class="ku">kali</span><span class="ka">㉿</span><span class="kh">cyberspectre</span><span class="kb">)-[</span><span class="kp">~</span><span class="kb">]</span></div>
+                            <div class="kali-row cmd-row"><span class="kb">└─</span><span class="kd">$</span> <span class="kcmd">sudo ./recruit.sh --candidate=$(whoami)</span></div>
+                            <div class="kali-row out-row">[<span class="ok">✓</span>] human ............... <span class="ok">true</span></div>
+                            <div class="kali-row out-row">[<span class="ok">✓</span>] curious ............. <span class="ok">very</span></div>
+                            <div class="kali-row out-row">[<span class="ok">✓</span>] mmu_student ......... <span class="ok">probably</span></div>
+                            <div class="kali-row out-row">[<span class="warn">!</span>] skill_required ...... <span class="warn">none — we'll teach you</span></div>
+                            <div class="kali-row out-row">[<span class="ok">✓</span>] verdict ............. <span class="qt">YOU'RE IN.</span></div>
+
+                            <!-- INTERACTIVE PROMPT — wired up by JS -->
+                            <div id="kali-shell-output"></div>
+                            <div class="kali-row prompt-row" id="kali-live-prompt"><span class="kb">┌──(</span><span class="ku">kali</span><span class="ka">㉿</span><span class="kh">cyberspectre</span><span class="kb">)-[</span><span class="kp" id="kali-live-cwd">~</span><span class="kb">]</span></div>
+                            <div class="kali-row cmd-row kali-input-row"><span class="kb">└─</span><span class="kd">$</span>&nbsp;<span class="kali-input-wrap"><input type="text" id="kali-input" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Kali shell input"><span class="kali-cursor" id="kali-cursor">█</span></span></div>
+                            <div class="kali-row out-row dim kali-hint">// click here to focus · type <span class="kcmd">help</span> for commands · Tab to autocomplete · ↑↓ history</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TICKER -->
+            <section class="ticker-section">
+                <div class="ticker-wrap">
+                    <div class="ticker-track">
+                        <div class="ticker-item">/// PENETRATION TESTING</div><div class="ticker-dot">●</div>
+                        <div class="ticker-item">/// CRYPTOGRAPHY</div><div class="ticker-dot">●</div>
+                        <div class="ticker-item">/// REVERSE ENGINEERING</div><div class="ticker-dot">●</div>
+                        <div class="ticker-item">/// DIGITAL FORENSICS</div><div class="ticker-dot">●</div>
+                        <div class="ticker-item">/// WEB SECURITY</div><div class="ticker-dot">●</div>
+                        <div class="ticker-item">/// BLUE TEAM &amp; SOC</div><div class="ticker-dot">●</div>
+                        <div class="ticker-item">/// BINARY EXPLOITATION</div><div class="ticker-dot">●</div>
+                        <div class="ticker-item">/// NETWORK SECURITY</div><div class="ticker-dot">●</div>
+                        <div class="ticker-item">/// PENETRATION TESTING</div><div class="ticker-dot">●</div>
+                        <div class="ticker-item">/// CRYPTOGRAPHY</div><div class="ticker-dot">●</div>
+                        <div class="ticker-item">/// REVERSE ENGINEERING</div><div class="ticker-dot">●</div>
+                        <div class="ticker-item">/// DIGITAL FORENSICS</div><div class="ticker-dot">●</div>
+                        <div class="ticker-item">/// WEB SECURITY</div><div class="ticker-dot">●</div>
+                        <div class="ticker-item">/// BLUE TEAM &amp; SOC</div><div class="ticker-dot">●</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DIRECTORY (quick navigation cards) -->
+            <section class="section">
+                <div class="section-head">
+                    <span class="kicker"><span class="kicker-bar"></span>// DIRECTORY</span>
+                    <h2 class="display">
+                        Four files. One <span class="hl-mono">collective.</span>
+                        <span class="hl-italic">Pick your entry point.</span>
+                    </h2>
+                </div>
+                <div class="quick-grid">
+                    <a href="about.html" class="quick-card">
+                        <div class="qc-head">
+                            <span class="qc-num">/01 — IDENTITY</span>
+                            <svg class="qc-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 15L15 5M15 5H7M15 5V13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <h3 class="qc-title">About &amp; Manifesto</h3>
+                        <p class="qc-desc">The mission, the CSPECTRE acronym, and what makes us different from every other club.</p>
+                        <div class="qc-meta">
+                            <span class="qc-tag">vision</span>
+                            <span class="qc-tag">manifesto</span>
+                            <span class="qc-tag">differentiators</span>
+                        </div>
+                    </a>
+                    <a href="programs.html" class="quick-card">
+                        <div class="qc-head">
+                            <span class="qc-num">/02 — OPERATIONS</span>
+                            <svg class="qc-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 15L15 5M15 5H7M15 5V13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <h3 class="qc-title">Programs &amp; Training</h3>
+                        <p class="qc-desc">Five training tracks, the CTF roadmap from local to international, and how members level up.</p>
+                        <div class="qc-meta">
+                            <span class="qc-tag">workshops</span>
+                            <span class="qc-tag">CTFs</span>
+                            <span class="qc-tag">roadmap</span>
+                        </div>
+                    </a>
+                    <a href="tools.html" class="quick-card">
+                        <div class="qc-head">
+                            <span class="qc-num">/03 — TOOLKIT</span>
+                            <svg class="qc-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 15L15 5M15 5H7M15 5V13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <h3 class="qc-title">Hacker Toolkit</h3>
+                        <p class="qc-desc">Base64, Caesar, ROT13, Hex, URL, SHA-256, Binary — quick CTF helpers built into the website.</p>
+                        <div class="qc-meta">
+                            <span class="qc-tag">decoders</span>
+                            <span class="qc-tag">ciphers</span>
+                            <span class="qc-tag">hashes</span>
+                        </div>
+                    </a>
+                    <a href="enlist.html" class="quick-card">
+                        <div class="qc-head">
+                            <span class="qc-num">/04 — ENLIST</span>
+                            <svg class="qc-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 15L15 5M15 5H7M15 5V13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <h3 class="qc-title">Join the Ghost</h3>
+                        <p class="qc-desc">Survey demand, what's open, and how to enlist. Open to all MMU students — no experience needed.</p>
+                        <div class="qc-meta">
+                            <span class="qc-tag">recruit</span>
+                            <span class="qc-tag">contact</span>
+                            <span class="qc-tag">apply</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Try-before-you-join cards -->
+                <div class="section-head" style="margin-top:5rem;text-align:center">
+                    <span class="kicker"><span class="kicker-bar"></span>// INTERACT FIRST</span>
+                    <h2 class="display" style="margin: 0 auto;">
+                        Try things <span class="hl-mono">before</span>
+                        you <span class="hl-italic">apply.</span>
+                    </h2>
+                </div>
+                <div class="quick-grid" style="grid-template-columns:repeat(3,1fr)">
+                    <a href="quiz.html" class="quick-card">
+                        <div class="qc-head">
+                            <span class="qc-num">/A — PROFILER</span>
+                            <svg class="qc-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 15L15 5M15 5H7M15 5V13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <h3 class="qc-title">What kind of hacker are you?</h3>
+                        <p class="qc-desc">6-question quiz reveals your archetype + recommended training track. 60 seconds.</p>
+                        <div class="qc-meta">
+                            <span class="qc-tag">quiz</span>
+                            <span class="qc-tag">archetype</span>
+                            <span class="qc-tag">shareable</span>
+                        </div>
+                    </a>
+                    <a href="recon.html" class="quick-card">
+                        <div class="qc-head">
+                            <span class="qc-num">/B — RECON</span>
+                            <svg class="qc-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 15L15 5M15 5H7M15 5V13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <h3 class="qc-title">Solve to enter</h3>
+                        <p class="qc-desc">Three baby ciphers — base64, Caesar, hex. Decode them, unlock the express application + a recon badge.</p>
+                        <div class="qc-meta">
+                            <span class="qc-tag">puzzle</span>
+                            <span class="qc-tag">badge</span>
+                            <span class="qc-tag">crypto</span>
+                        </div>
+                    </a>
+                    <a href="scoreboard.html" class="quick-card">
+                        <div class="qc-head">
+                            <span class="qc-num">/C — SCOREBOARD</span>
+                            <svg class="qc-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 15L15 5M15 5H7M15 5V13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <h3 class="qc-title">Top 10 this month</h3>
+                        <p class="qc-desc">Live leaderboard. Initiate → Operative → Phantom → Spectre → Wraith. Climb to the top, earn the role.</p>
+                        <div class="qc-meta">
+                            <span class="qc-tag">ranks</span>
+                            <span class="qc-tag">badges</span>
+                            <span class="qc-tag">live</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Live ops panel -->
+                <div class="ops-panel">
+                    <div class="ops-head">
+                        <div class="ops-title">
+                            <span class="live-dot"></span>
+                            <span>// LIVE OPS · QUARTER 02 · 2026</span>
+                        </div>
+                        <div class="cyber-badge green">
+                            <span class="status-dot"></span>
+                            <span>OPERATIONAL</span>
+                        </div>
+                    </div>
+                    <div class="ops-grid">
+                        <div class="ops-cell">
+                            <div class="ops-lbl">// MEMBERS</div>
+                            <div class="ops-val">120<span>+</span></div>
+                            <div class="ops-trend">▲ 12% MoM</div>
+                        </div>
+                        <div class="ops-cell">
+                            <div class="ops-lbl">// ACTIVE TEAMS</div>
+                            <div class="ops-val">04</div>
+                            <div class="ops-trend purple">// 04 squads</div>
+                        </div>
+                        <div class="ops-cell">
+                            <div class="ops-lbl">// CTFs THIS Q</div>
+                            <div class="ops-val">12</div>
+                            <div class="ops-trend">▲ 24% YoY</div>
+                        </div>
+                        <div class="ops-cell">
+                            <div class="ops-lbl">// WIN RATE</div>
+                            <div class="ops-val">68<span>%</span></div>
+                            <div class="ops-trend">▲ 8 pts</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ASCII DIVIDER -->
+            <div class="ascii-divider">────────────────[ END.OF.TRANSMISSION ]────────────────</div>
+
+            <!-- CTA STRIP -->
+            <div class="cta-strip">
+                <div>
+                    <div class="kicker"><span class="kicker-bar"></span>// READY TO ENLIST</div>
+                    <h3>Open to all MMU students. <span class="hl-italic">Beginners welcome.</span></h3>
+                    <p>The collective is forming now. Join before the next CTF cycle and start training in week one.</p>
+                </div>
+                <div class="cta-actions">
+                    <a href="join.html" class="btn-primary btn-lg">
+                        <span>Enlist now</span>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo logo-lg">
+                        <img src="assets/logo.png" alt="CyberSpectre logo" class="logo-mark" width="48" height="48">
+                        <span class="logo-name">cyberspectre</span>
+                    </a>
+                    <p class="tagline-mark">// PRESENT EVERYWHERE. SEEN NOWHERE.</p>
+                    <p>MMU's elite cybersecurity collective — operating in the shadows, training in the open.</p>
+                </div>
+                <div class="footer-cols">
+                    <div class="fcol">
+                        <h5>Pages</h5>
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="programs.html">Programs</a>
+                        <a href="events.html">Events</a>
+                        <a href="join.html">Join</a>
+                    </div>
+                    <div class="fcol">
+                        <h5>Operations</h5>
+                        <a href="programs.html#training">Training</a>
+                        <a href="programs.html#ctfs">CTFs</a>
+                        <a href="faq.html">FAQ</a>
+                        <a href="join.html#contact">Contact</a>
+                    </div>
+                    <div class="fcol">
+                        <h5>Channels</h5>
+                        <a href="#">Discord</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">GitHub</a>
+                        <a href="#">CTFtime</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 CyberSpectre — MMU Cybersecurity Club</p>
+                <p class="mono">// SECURE · DEFEND · WIN</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

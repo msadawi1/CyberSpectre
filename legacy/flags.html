@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CyberSpectre Flag Hunt — find hidden flags scattered across the website. Submit them here for points.">
+    <title>Flag Hunt — CyberSpectre</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    <div class="page">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+            <div class="topbar-inner">
+                <a href="index.html" class="logo">
+                    <img src="assets/logo.png" alt="CyberSpectre logo" class="logo-mark" width="40" height="40">
+                    <span class="logo-name">cyberspectre</span>
+                </a>
+                <nav class="topnav" aria-label="Main">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="programs.html">Programs</a>
+                    <a href="events.html">Events</a>
+                    <a href="tools.html">Tools</a>
+                    <a href="enlist.html">Enlist</a>
+                </nav>
+                <div class="topbar-right">
+                    <div class="status-pill">
+                        <span class="status-dot"></span>
+                        <span>HUNT ACTIVE</span>
+                    </div>
+                    <a href="enlist.html" class="btn-primary btn-sm">
+                        <span>Enlist now</span>
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span><span></span>
+                </button>
+            </div>
+        </header>
+
+        <main id="main">
+            <!-- PAGE HERO -->
+            <section class="page-hero">
+                <div class="page-hero-inner">
+                    <div class="breadcrumb">
+                        <a href="index.html">cyberspectre</a>
+                        <span class="sep">/</span>
+                        <span class="current">flag-hunt</span>
+                    </div>
+                    <div class="kicker"><span class="kicker-bar"></span>// FILE 10 — RECON CHALLENGE</div>
+                    <h1 class="page-title">
+                        Find the <span class="hl-mono">hidden flags.</span>
+                        Earn your <span class="hl-italic">points.</span>
+                    </h1>
+                    <p class="page-subtitle">There are <strong>10 flags</strong> hidden across this website. View page source. Inspect elements. Decode strings. Open the console. The web is your playground — find them all.</p>
+                </div>
+            </section>
+
+            <!-- HUNT DASHBOARD -->
+            <section class="section">
+                <div class="section-inner">
+                    <div class="hunt-dashboard">
+
+                        <!-- SCORE & PROGRESS -->
+                        <div class="hunt-score-panel">
+                            <div class="hunt-score-header">
+                                <span class="kicker"><span class="kicker-bar"></span>// YOUR SCORE</span>
+                                <h2 class="hunt-score">
+                                    <span id="hunt-found">0</span> / <span id="hunt-total">10</span>
+                                </h2>
+                                <p class="hunt-rank" id="hunt-rank">Rank: ROOKIE 🌱</p>
+                            </div>
+                            <div class="hunt-progress-bar">
+                                <div class="hunt-progress-fill" id="hunt-progress-fill" style="width: 0%"></div>
+                            </div>
+                            <div class="hunt-actions">
+                                <button class="tool-btn ghost" id="hunt-reset">Reset progress</button>
+                            </div>
+                        </div>
+
+                        <!-- FLAG INPUT -->
+                        <div class="hunt-input-panel">
+                            <span class="kicker"><span class="kicker-bar"></span>// SUBMIT FLAG</span>
+                            <h3>Drop a flag here</h3>
+                            <p>Format: <code>flag{...}</code> — case-insensitive. Submitted flags are saved locally to your browser.</p>
+                            <form class="hunt-form" id="hunt-form">
+                                <input type="text" id="hunt-input" placeholder="flag{example_text_here}" autocomplete="off">
+                                <button type="submit" class="btn-primary">Submit</button>
+                            </form>
+                            <div class="hunt-feedback" id="hunt-feedback"></div>
+                        </div>
+
+                    </div>
+
+                    <!-- MISSIONS / HINTS -->
+                    <div class="hunt-missions">
+                        <span class="kicker"><span class="kicker-bar"></span>// MISSION BRIEFINGS</span>
+                        <h2>Where to look</h2>
+                        <p class="hunt-missions-intro">Each flag has a hint pointing to where it might be. Tick them off as you find them. Right-click and "View Source" is your friend.</p>
+
+                        <div class="missions-grid">
+                            <div class="mission-card" data-mission="1">
+                                <div class="mission-status"><span class="mission-tick">⬜</span> <span class="mission-num">01</span></div>
+                                <h4>The Welcome Mat</h4>
+                                <p>The very first page might say more in its source than on screen. Look at what's hiding in HTML comments.</p>
+                                <span class="mission-points">+10 pts</span>
+                            </div>
+                            <div class="mission-card" data-mission="2">
+                                <div class="mission-status"><span class="mission-tick">⬜</span> <span class="mission-num">02</span></div>
+                                <h4>About Face</h4>
+                                <p>The About page tells our story. There's a flag tucked into one of the section's metadata.</p>
+                                <span class="mission-points">+10 pts</span>
+                            </div>
+                            <div class="mission-card" data-mission="3">
+                                <div class="mission-status"><span class="mission-tick">⬜</span> <span class="mission-num">03</span></div>
+                                <h4>Programs Whisper</h4>
+                                <p>Our programs page lists what we teach — but one element has an attribute it shouldn't have.</p>
+                                <span class="mission-points">+10 pts</span>
+                            </div>
+                            <div class="mission-card" data-mission="4">
+                                <div class="mission-status"><span class="mission-tick">⬜</span> <span class="mission-num">04</span></div>
+                                <h4>The Tools Don't Lie</h4>
+                                <p>The tools page knows secrets. Check its <code>head</code>.</p>
+                                <span class="mission-points">+10 pts</span>
+                            </div>
+                            <div class="mission-card" data-mission="5">
+                                <div class="mission-status"><span class="mission-tick">⬜</span> <span class="mission-num">05</span></div>
+                                <h4>Tool's Microchallenge</h4>
+                                <p>The tools page has a public micro-challenge. Decode it. There's a flag inside.</p>
+                                <span class="mission-points">+15 pts</span>
+                            </div>
+                            <div class="mission-card" data-mission="6">
+                                <div class="mission-status"><span class="mission-tick">⬜</span> <span class="mission-num">06</span></div>
+                                <h4>Console Logs</h4>
+                                <p>Open the developer console on any page. We may or may not log a flag for the curious.</p>
+                                <span class="mission-points">+10 pts</span>
+                            </div>
+                            <div class="mission-card" data-mission="7">
+                                <div class="mission-status"><span class="mission-tick">⬜</span> <span class="mission-num">07</span></div>
+                                <h4>Konami's Honor</h4>
+                                <p>↑ ↑ ↓ ↓ ← → ← → B A — the legendary code. Try it on the home page. <em>Something will happen.</em></p>
+                                <span class="mission-points">+15 pts</span>
+                            </div>
+                            <div class="mission-card" data-mission="8">
+                                <div class="mission-status"><span class="mission-tick">⬜</span> <span class="mission-num">08</span></div>
+                                <h4>The Slash</h4>
+                                <p>Press <kbd>/</kbd> on any page. A command palette opens. Type <code>help</code>. There's a flag in there for those who explore.</p>
+                                <span class="mission-points">+15 pts</span>
+                            </div>
+                            <div class="mission-card" data-mission="9">
+                                <div class="mission-status"><span class="mission-tick">⬜</span> <span class="mission-num">09</span></div>
+                                <h4>Robot Overlords</h4>
+                                <p>Every good website has a robots.txt. Ours does too. <a href="robots.txt" target="_blank">Check it out.</a></p>
+                                <span class="mission-points">+10 pts</span>
+                            </div>
+                            <div class="mission-card" data-mission="10">
+                                <div class="mission-status"><span class="mission-tick">⬜</span> <span class="mission-num">10</span></div>
+                                <h4>Final Boss</h4>
+                                <p>This page itself hides a flag in its CSS. <code>display: none</code> isn't always invisible to those who look.</p>
+                                <span class="mission-points">+20 pts</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- HALL OF FAME -->
+                    <div class="hunt-hall-of-fame">
+                        <span class="kicker"><span class="kicker-bar"></span>// HALL OF FAME</span>
+                        <h2>Members who found them all</h2>
+                        <p>When you submit your discord handle on Discord with proof, you're inducted here.</p>
+                        <ol class="hof-list">
+                            <li><span class="hof-rank">#1</span> <span class="hof-name">— vacant —</span> <span class="hof-time">be the first</span></li>
+                            <li><span class="hof-rank">#2</span> <span class="hof-name">— vacant —</span> <span class="hof-time">—</span></li>
+                            <li><span class="hof-rank">#3</span> <span class="hof-name">— vacant —</span> <span class="hof-time">—</span></li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <!-- HIDDEN FLAG IN CSS -->
+            <div class="secret-flag" aria-hidden="true">flag{display_none_isnt_security}</div>
+
+            <!-- CTA -->
+            <section class="section">
+                <div class="cta-card">
+                    <h3>Found a bug while flag-hunting? <span class="hl-italic">Tell us in Discord.</span></h3>
+                    <p>Every recon teaches us something. If you find an XSS, an exposed file, or a misconfig — please report it instead of exploiting it. We'll celebrate you.</p>
+                    <div class="cta-actions">
+                        <a href="join.html" class="btn-primary btn-lg">
+                            <span>Report a finding</span>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo logo-lg">
+                        <img src="assets/logo.png" alt="CyberSpectre logo" class="logo-mark" width="48" height="48">
+                        <span class="logo-name">cyberspectre</span>
+                    </a>
+                    <p class="tagline-mark">// PRESENT EVERYWHERE. SEEN NOWHERE.</p>
+                    <p>MMU's elite cybersecurity collective — operating in the shadows, training in the open.</p>
+                </div>
+                <div class="footer-cols">
+                    <div class="fcol">
+                        <h5>Pages</h5>
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="programs.html">Programs</a>
+                        <a href="events.html">Events</a>
+                        <a href="tools.html">Tools</a>
+                        <a href="join.html">Join</a>
+                    </div>
+                    <div class="fcol">
+                        <h5>Operations</h5>
+                        <a href="programs.html#training">Training</a>
+                        <a href="programs.html#ctfs">CTFs</a>
+                        <a href="flags.html">Flag Hunt</a>
+                        <a href="faq.html">FAQ</a>
+                    </div>
+                    <div class="fcol">
+                        <h5>Channels</h5>
+                        <a href="#">Discord</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">GitHub</a>
+                        <a href="#">CTFtime</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 CyberSpectre — MMU Cybersecurity Club</p>
+                <p class="mono">// SECURE · DEFEND · WIN</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

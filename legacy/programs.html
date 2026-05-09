@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CyberSpectre programs — five training tracks and a structured CTF competition roadmap from local to international.">
+    <title>Programs — CyberSpectre</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <!-- Recon tip: an element on this page has a data-flag attribute. Inspect carefully. -->
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    <div class="page">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+            <div class="topbar-inner">
+                <a href="index.html" class="logo">
+                    <img src="assets/logo.png" alt="CyberSpectre logo" class="logo-mark" width="40" height="40">
+                    <span class="logo-name">cyberspectre</span>
+                </a>
+                <nav class="topnav" aria-label="Main">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="programs.html" class="active">Programs</a>
+                    <a href="events.html">Events</a>
+                    <a href="tools.html">Tools</a>
+                    <a href="enlist.html">Enlist</a>
+                </nav>
+                <div class="topbar-right">
+                    <div class="status-pill">
+                        <span class="status-dot"></span>
+                        <span>INTAKE OPEN</span>
+                    </div>
+                    <a href="enlist.html" class="btn-primary btn-sm">
+                        <span>Enlist now</span>
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span><span></span>
+                </button>
+            </div>
+        </header>
+
+        <main id="main">
+            <!-- PAGE HERO -->
+            <section class="page-hero">
+                <div class="breadcrumb">
+                    <span class="home">~</span>
+                    <span class="sep">/</span>
+                    <a href="index.html">cyberspectre</a>
+                    <span class="sep">/</span>
+                    <span class="current">programs</span>
+                </div>
+                <div class="kicker"><span class="kicker-bar"></span>// FILE 02 — OPERATIONS</div>
+                <h1 class="page-title">
+                    Five tracks. One <span class="hl-mono">CTF roadmap.</span>
+                    <span class="hl-italic">From beginner to elite.</span>
+                </h1>
+                <p class="page-subtitle">Hands-on workshops, real tools, and a structured competition path that takes members from local CTFs to the international stage.</p>
+
+                <div class="page-meta">
+                    <div class="meta-item">
+                        <span class="meta-lbl">// TRAINING TRACKS</span>
+                        <span class="meta-val">05 active</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-lbl">// CADENCE</span>
+                        <span class="meta-val">Weekly sessions</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-lbl">// SKILL FLOOR</span>
+                        <span class="meta-val">No prior experience required</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-lbl">// FORMAT</span>
+                        <span class="meta-val">Workshops + labs + CTFs</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TRAINING -->
+            <section class="section training" id="training" data-flag="flag{programs_have_secrets_too}">
+                <div class="section-head">
+                    <span class="kicker"><span class="kicker-bar"></span>// 01 — TRAINING TRACKS</span>
+                    <h2 class="display">
+                        Hands-on <span class="hl-mono">workshops</span>, real tools,
+                        <span class="hl-italic">real skills.</span>
+                    </h2>
+                </div>
+                <div class="training-list">
+                    <div class="track">
+                        <div class="track-meta">
+                            <span class="track-num">01</span>
+                            <span class="track-tag">RED TEAM</span>
+                        </div>
+                        <div class="track-content">
+                            <h3>Ethical Hacking &amp; Penetration Testing</h3>
+                            <p>Master offensive security techniques, vulnerability assessment, and exploitation methodologies used by industry professionals. From basic recon to full-chain exploitation.</p>
+                        </div>
+                        <div class="track-tools">
+                            <span>Burp Suite</span><span>Metasploit</span><span>Nmap</span><span>OSCP-style</span>
+                        </div>
+                    </div>
+                    <div class="track">
+                        <div class="track-meta">
+                            <span class="track-num">02</span>
+                            <span class="track-tag">WEB &amp; NET</span>
+                        </div>
+                        <div class="track-content">
+                            <h3>Web &amp; Network Security</h3>
+                            <p>Deep dive into web application vulnerabilities, network protocols, OWASP Top 10, and secure architecture principles. The bread and butter of modern offensive security.</p>
+                        </div>
+                        <div class="track-tools">
+                            <span>OWASP</span><span>Wireshark</span><span>SQLi</span><span>XSS</span>
+                        </div>
+                    </div>
+                    <div class="track">
+                        <div class="track-meta">
+                            <span class="track-num">03</span>
+                            <span class="track-tag">FORENSICS</span>
+                        </div>
+                        <div class="track-content">
+                            <h3>Digital Forensics</h3>
+                            <p>Investigate digital evidence, memory analysis, disk forensics, and incident reconstruction in real-world scenarios. Every breach leaves a trace — learn to find it.</p>
+                        </div>
+                        <div class="track-tools">
+                            <span>Autopsy</span><span>Volatility</span><span>FTK</span><span>Memory</span>
+                        </div>
+                    </div>
+                    <div class="track">
+                        <div class="track-meta">
+                            <span class="track-num">04</span>
+                            <span class="track-tag">BLUE TEAM</span>
+                        </div>
+                        <div class="track-content">
+                            <h3>Blue Team &amp; SOC Fundamentals</h3>
+                            <p>Defensive security operations, threat detection, SIEM tools, and incident response in security operations centers. The other side of the offense.</p>
+                        </div>
+                        <div class="track-tools">
+                            <span>Splunk</span><span>ELK</span><span>SIEM</span><span>Threat Hunting</span>
+                        </div>
+                    </div>
+                    <div class="track">
+                        <div class="track-meta">
+                            <span class="track-num">05</span>
+                            <span class="track-tag">CTF</span>
+                        </div>
+                        <div class="track-content">
+                            <h3>CTF Skills &amp; Problem-Solving</h3>
+                            <p>Capture-the-flag methodology covering cryptography, reverse engineering, binary exploitation, web challenges, and forensics. Where everything we teach meets competition.</p>
+                        </div>
+                        <div class="track-tools">
+                            <span>Crypto</span><span>PWN</span><span>Reversing</span><span>Web</span><span>Forensics</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="ascii-divider">─────────────[ COMPETITION.PATH ]─────────────</div>
+
+            <!-- CTF ROADMAP -->
+            <section class="section ctf-roadmap" id="ctfs">
+                <div class="section-head">
+                    <span class="kicker"><span class="kicker-bar"></span>// 02 — COMPETITION ROADMAP</span>
+                    <h2 class="display">
+                        From <span class="hl-mono">local practice</span> to
+                        <span class="hl-blue">global stages.</span>
+                    </h2>
+                </div>
+                <div class="roadmap">
+                    <div class="rm-step">
+                        <div class="rm-meta">
+                            <span class="rm-num">01</span>
+                            <span class="rm-level">FOUNDATION</span>
+                        </div>
+                        <h3>Local CTFs</h3>
+                        <p>Skill building and onboarding for new members through internal competitions and beginner-friendly challenges.</p>
+                    </div>
+                    <div class="rm-arrow">
+                        <svg width="32" height="20" viewBox="0 0 32 20" fill="none"><path d="M0 10H30M30 10L22 2M30 10L22 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div class="rm-step">
+                        <div class="rm-meta">
+                            <span class="rm-num">02</span>
+                            <span class="rm-level">INTERMEDIATE</span>
+                        </div>
+                        <h3>National CTFs</h3>
+                        <p>Official MMU representation in Malaysia's national cybersecurity competitions, building inter-university reputation.</p>
+                    </div>
+                    <div class="rm-arrow">
+                        <svg width="32" height="20" viewBox="0 0 32 20" fill="none"><path d="M0 10H30M30 10L22 2M30 10L22 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div class="rm-step">
+                        <div class="rm-meta">
+                            <span class="rm-num">03</span>
+                            <span class="rm-level">ELITE</span>
+                        </div>
+                        <h3>International CTFs</h3>
+                        <p>Global exposure for MMU on the world stage, competing with top cybersecurity teams from around the globe.</p>
+                    </div>
+                </div>
+                <div class="initiatives">
+                    <div class="init-row">
+                        <span class="init-num">01</span>
+                        <span class="init-text">Formation of an <strong>official MMU CTF Team</strong> representing the university externally</span>
+                        <span class="init-status"><span class="dot active"></span> Active</span>
+                    </div>
+                    <div class="init-row">
+                        <span class="init-num">02</span>
+                        <span class="init-text">Regular <strong>internal CTFs and training sessions</strong> open to all members</span>
+                        <span class="init-status"><span class="dot active"></span> Active</span>
+                    </div>
+                    <div class="init-row">
+                        <span class="init-num">03</span>
+                        <span class="init-text">Long-term: <strong>hosting national and international CTFs at MMU</strong></span>
+                        <span class="init-status"><span class="dot pending"></span> Q3 2026</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA STRIP -->
+            <div class="cta-strip">
+                <div>
+                    <div class="kicker"><span class="kicker-bar"></span>// READY?</div>
+                    <h3>Pick your path. <span class="hl-italic">Enlist now.</span></h3>
+                    <p>Six stages. One ID card. Less than five minutes. The intake console is the most fun way you'll ever apply to a club.</p>
+                </div>
+                <div class="cta-actions">
+                    <a href="enlist.html" class="btn-primary btn-lg">
+                        <span>Enlist now</span>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo logo-lg">
+                        <img src="assets/logo.png" alt="CyberSpectre logo" class="logo-mark" width="48" height="48">
+                        <span class="logo-name">cyberspectre</span>
+                    </a>
+                    <p class="tagline-mark">// PRESENT EVERYWHERE. SEEN NOWHERE.</p>
+                    <p>MMU's elite cybersecurity collective — operating in the shadows, training in the open.</p>
+                </div>
+                <div class="footer-cols">
+                    <div class="fcol">
+                        <h5>Pages</h5>
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="programs.html">Programs</a>
+                        <a href="events.html">Events</a>
+                        <a href="join.html">Join</a>
+                    </div>
+                    <div class="fcol">
+                        <h5>Operations</h5>
+                        <a href="programs.html#training">Training</a>
+                        <a href="programs.html#ctfs">CTFs</a>
+                        <a href="faq.html">FAQ</a>
+                        <a href="join.html#contact">Contact</a>
+                    </div>
+                    <div class="fcol">
+                        <h5>Channels</h5>
+                        <a href="#">Discord</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">GitHub</a>
+                        <a href="#">CTFtime</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 CyberSpectre — MMU Cybersecurity Club</p>
+                <p class="mono">// SECURE · DEFEND · WIN</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enlist in CyberSpectre — interactive operative intake console. Six stages. One ID card.">
+    <title>Enlist — CyberSpectre</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    <div class="page">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+            <div class="topbar-inner">
+                <a href="index.html" class="logo">
+                    <img src="assets/logo.png" alt="CyberSpectre logo" class="logo-mark" width="40" height="40">
+                    <span class="logo-name">cyberspectre</span>
+                </a>
+                <nav class="topnav" aria-label="Main">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="programs.html">Programs</a>
+                    <a href="events.html">Events</a>
+                    <a href="tools.html">Tools</a>
+                    <a href="enlist.html" class="active">Enlist</a>
+                </nav>
+                <div class="topbar-right">
+                    <div class="status-pill">
+                        <span class="status-dot"></span>
+                        <span>INTAKE OPEN</span>
+                    </div>
+                    <a href="enlist.html" class="btn-primary btn-sm">
+                        <span>Enlist now</span>
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span><span></span>
+                </button>
+            </div>
+        </header>
+
+        <main id="main">
+            <!-- HERO -->
+            <section class="enlist-hero">
+                <div class="enlist-hero-inner">
+                    <div class="kicker"><span class="kicker-bar"></span>// OPERATIVE INTAKE CONSOLE</div>
+                    <h1 class="enlist-title">
+                        Six stages.
+                        <span class="hl-mono">One ID card.</span>
+                        <span class="hl-italic">No paperwork.</span>
+                    </h1>
+                    <p class="enlist-subtitle">A regular form is for regular clubs. CyberSpectre intake is an interactive console — answer at your pace, build your operative identity, and walk out with a personalized hacker ID badge.</p>
+                </div>
+            </section>
+
+            <!-- INTAKE CONSOLE -->
+            <section class="section enlist-section">
+                <div class="enlist-console" id="enlist-console">
+
+                    <!-- PROGRESS BAR -->
+                    <div class="enlist-progress">
+                        <div class="enlist-progress-track">
+                            <div class="enlist-progress-fill" id="enlist-progress-fill"></div>
+                        </div>
+                        <div class="enlist-progress-stages" id="enlist-progress-stages">
+                            <span data-stage="1">01</span>
+                            <span data-stage="2">02</span>
+                            <span data-stage="3">03</span>
+                            <span data-stage="4">04</span>
+                            <span data-stage="5">05</span>
+                            <span data-stage="6">06</span>
+                        </div>
+                    </div>
+
+                    <!-- STAGE 01 — IDENTITY -->
+                    <div class="enlist-stage active" data-stage="1">
+                        <div class="stage-tag">// STAGE 01 — IDENTITY</div>
+                        <h2 class="stage-title">Who are you?</h2>
+                        <p class="stage-desc">Tell us who's enlisting. Used only to send you the Discord invite + intake confirmation. We don't share, sell, or spam.</p>
+
+                        <div class="stage-form">
+                            <label class="stage-label">
+                                <span class="label-text">Full name</span>
+                                <input type="text" id="f-name" class="stage-input" placeholder="e.g. Ammar Yasser" autocomplete="name">
+                            </label>
+                            <label class="stage-label">
+                                <span class="label-text">MMU email</span>
+                                <input type="email" id="f-email" class="stage-input" placeholder="you@student.mmu.edu.my" autocomplete="email">
+                            </label>
+                            <div class="stage-grid-2">
+                                <label class="stage-label">
+                                    <span class="label-text">Faculty</span>
+                                    <select id="f-faculty" class="stage-input">
+                                        <option value="">— select —</option>
+                                        <option>FCI — Computing & Informatics</option>
+                                        <option>FOE — Engineering</option>
+                                        <option>FOM — Management</option>
+                                        <option>FCM — Creative Multimedia</option>
+                                        <option>FOL — Law</option>
+                                        <option>FAC — Applied Communication</option>
+                                        <option>Other</option>
+                                    </select>
+                                </label>
+                                <label class="stage-label">
+                                    <span class="label-text">Year of study</span>
+                                    <select id="f-year" class="stage-input">
+                                        <option value="">— select —</option>
+                                        <option>Foundation</option>
+                                        <option>Year 1</option>
+                                        <option>Year 2</option>
+                                        <option>Year 3</option>
+                                        <option>Year 4+</option>
+                                        <option>Postgrad</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="stage-actions">
+                            <button class="tool-btn ghost" disabled>← back</button>
+                            <button class="btn-primary stage-next" data-from="1" data-to="2">
+                                <span>Continue</span>
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- STAGE 02 — CALLSIGN -->
+                    <div class="enlist-stage" data-stage="2">
+                        <div class="stage-tag">// STAGE 02 — CALLSIGN</div>
+                        <h2 class="stage-title">Pick your handle.</h2>
+                        <p class="stage-desc">Inside CyberSpectre, you're known by your handle — not your real name. Pick something memorable. Or roll the dice and let our handle generator suggest one.</p>
+
+                        <div class="callsign-area">
+                            <div class="callsign-display" id="callsign-display">
+                                <span class="cs-prefix">@</span><span class="cs-handle" id="cs-handle-text">choose_a_handle</span>
+                            </div>
+                            <div class="callsign-controls">
+                                <input type="text" id="f-handle" class="stage-input" placeholder="lowercase, underscores ok" maxlength="20" pattern="[a-z0-9_]+">
+                                <button class="tool-btn" id="btn-generate-handle" type="button">🎲 Generate</button>
+                            </div>
+                            <div class="callsign-hints">
+                                <span class="hint-chip">no spaces</span>
+                                <span class="hint-chip">lowercase only</span>
+                                <span class="hint-chip">3–20 chars</span>
+                                <span class="hint-chip">underscores ok</span>
+                            </div>
+                        </div>
+
+                        <div class="stage-actions">
+                            <button class="tool-btn ghost stage-back" data-from="2" data-to="1">← back</button>
+                            <button class="btn-primary stage-next" data-from="2" data-to="3">
+                                <span>Lock it in</span>
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- STAGE 03 — TRACK -->
+                    <div class="enlist-stage" data-stage="3">
+                        <div class="stage-tag">// STAGE 03 — TRACK ALIGNMENT</div>
+                        <h2 class="stage-title">Pick your specialty.</h2>
+                        <p class="stage-desc">Five tracks. Don't worry — you can switch later. This just tells us what to teach you first. <em>Curious about all of them?</em> Pick "Generalist" and we'll rotate you.</p>
+
+                        <div class="track-grid">
+                            <label class="track-card" data-track="web">
+                                <input type="radio" name="track" value="web">
+                                <div class="track-icon">🌐</div>
+                                <div class="track-name">Web Security</div>
+                                <p class="track-desc">SQLi, XSS, IDOR, business logic. The bread and butter of bug bounty.</p>
+                            </label>
+                            <label class="track-card" data-track="crypto">
+                                <input type="radio" name="track" value="crypto">
+                                <div class="track-icon">🔐</div>
+                                <div class="track-name">Cryptography</div>
+                                <p class="track-desc">Ciphers, hashes, RSA, elliptic curves. Math meets puzzles.</p>
+                            </label>
+                            <label class="track-card" data-track="pwn">
+                                <input type="radio" name="track" value="pwn">
+                                <div class="track-icon">💣</div>
+                                <div class="track-name">Pwn / Reverse</div>
+                                <p class="track-desc">Binary exploitation, reverse engineering, low-level hacking.</p>
+                            </label>
+                            <label class="track-card" data-track="forensics">
+                                <input type="radio" name="track" value="forensics">
+                                <div class="track-icon">🔬</div>
+                                <div class="track-name">Forensics / OSINT</div>
+                                <p class="track-desc">Memory dumps, packet captures, hidden data, tracking ghosts.</p>
+                            </label>
+                            <label class="track-card" data-track="redteam">
+                                <input type="radio" name="track" value="redteam">
+                                <div class="track-icon">🎯</div>
+                                <div class="track-name">Red Team</div>
+                                <p class="track-desc">Full attack chains. Recon → exploit → post-exploit. The whole story.</p>
+                            </label>
+                            <label class="track-card" data-track="general">
+                                <input type="radio" name="track" value="general">
+                                <div class="track-icon">🧭</div>
+                                <div class="track-name">Generalist</div>
+                                <p class="track-desc">Try everything. Pick later. Best for total beginners.</p>
+                            </label>
+                        </div>
+
+                        <div class="stage-actions">
+                            <button class="tool-btn ghost stage-back" data-from="3" data-to="2">← back</button>
+                            <button class="btn-primary stage-next" data-from="3" data-to="4">
+                                <span>Continue</span>
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- STAGE 04 — SKILL CHECK -->
+                    <div class="enlist-stage" data-stage="4">
+                        <div class="stage-tag">// STAGE 04 — SKILL CHECK</div>
+                        <h2 class="stage-title">Honest answers only.</h2>
+                        <p class="stage-desc">Three quick questions. There's no wrong answer — this just helps us match you with the right starting cohort and buddy.</p>
+
+                        <div class="skill-questions">
+                            <div class="skill-q">
+                                <p class="skill-prompt"><strong>Q1.</strong> Have you opened a Linux terminal before?</p>
+                                <div class="skill-opts">
+                                    <label><input type="radio" name="q1" value="0"><span>Never · what's a terminal?</span></label>
+                                    <label><input type="radio" name="q1" value="1"><span>A few times · I can <code>ls</code> and <code>cd</code></span></label>
+                                    <label><input type="radio" name="q1" value="2"><span>Daily · I live in the shell</span></label>
+                                </div>
+                            </div>
+                            <div class="skill-q">
+                                <p class="skill-prompt"><strong>Q2.</strong> Have you ever solved a CTF challenge?</p>
+                                <div class="skill-opts">
+                                    <label><input type="radio" name="q2" value="0"><span>Never · what's a CTF?</span></label>
+                                    <label><input type="radio" name="q2" value="1"><span>A couple of beginner ones</span></label>
+                                    <label><input type="radio" name="q2" value="2"><span>Multiple events · I have write-ups</span></label>
+                                </div>
+                            </div>
+                            <div class="skill-q">
+                                <p class="skill-prompt"><strong>Q3.</strong> How comfortable are you with reading code (any language)?</p>
+                                <div class="skill-opts">
+                                    <label><input type="radio" name="q3" value="0"><span>Looks like alien runes</span></label>
+                                    <label><input type="radio" name="q3" value="1"><span>I can mostly follow along</span></label>
+                                    <label><input type="radio" name="q3" value="2"><span>I can write it from scratch</span></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stage-actions">
+                            <button class="tool-btn ghost stage-back" data-from="4" data-to="3">← back</button>
+                            <button class="btn-primary stage-next" data-from="4" data-to="5">
+                                <span>Continue</span>
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- STAGE 05 — THE OATH -->
+                    <div class="enlist-stage" data-stage="5">
+                        <div class="stage-tag">// STAGE 05 — THE OATH</div>
+                        <h2 class="stage-title">The Operative's Oath.</h2>
+                        <p class="stage-desc">Cybersecurity is power. We use it ethically. Read the oath, then check the box if you agree.</p>
+
+                        <div class="oath-scroll" id="oath-scroll">
+                            <div class="oath-text" id="oath-text"></div>
+                        </div>
+
+                        <label class="oath-checkbox">
+                            <input type="checkbox" id="f-oath">
+                            <span>I solemnly swear to uphold the Operative's Oath.</span>
+                        </label>
+
+                        <div class="stage-actions">
+                            <button class="tool-btn ghost stage-back" data-from="5" data-to="4">← back</button>
+                            <button class="btn-primary stage-next" data-from="5" data-to="6" id="finalize-btn" disabled>
+                                <span>Finalize enlistment</span>
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- STAGE 06 — ID CARD -->
+                    <div class="enlist-stage" data-stage="6">
+                        <div class="stage-tag">// STAGE 06 — INTAKE COMPLETE</div>
+
+                        <div class="compile-anim" id="compile-anim">
+                            <div class="compile-line">[ <span class="ok">✓</span> ] identity verified</div>
+                            <div class="compile-line">[ <span class="ok">✓</span> ] handle registered</div>
+                            <div class="compile-line">[ <span class="ok">✓</span> ] track assigned</div>
+                            <div class="compile-line">[ <span class="ok">✓</span> ] cohort matched</div>
+                            <div class="compile-line">[ <span class="ok">✓</span> ] oath sworn</div>
+                            <div class="compile-line">[ <span class="ok">✓</span> ] generating ID card...</div>
+                        </div>
+
+                        <h2 class="stage-title" id="welcome-title" style="opacity:0;transition:opacity 0.6s 1.4s">Welcome aboard.</h2>
+
+                        <!-- THE ID CARD -->
+                        <div class="id-card" id="id-card">
+                            <div class="id-card-inner">
+                                <div class="id-card-header">
+                                    <div class="id-logo">
+                                        <img src="assets/logo.png" alt="CyberSpectre" width="44" height="44">
+                                        <div>
+                                            <div class="id-org">CYBERSPECTRE</div>
+                                            <div class="id-org-sub">MMU Cybersecurity Collective</div>
+                                        </div>
+                                    </div>
+                                    <div class="id-classification">
+                                        <span class="id-classification-tag">RECRUIT</span>
+                                    </div>
+                                </div>
+
+                                <div class="id-card-body">
+                                    <div class="id-photo">
+                                        <span class="id-photo-mask" id="id-mask">👻</span>
+                                    </div>
+                                    <div class="id-details">
+                                        <div class="id-row">
+                                            <span class="id-label">CALLSIGN</span>
+                                            <span class="id-value" id="id-callsign">@operative</span>
+                                        </div>
+                                        <div class="id-row">
+                                            <span class="id-label">CLEARANCE</span>
+                                            <span class="id-value" id="id-clearance">LEVEL 1 · INITIATE</span>
+                                        </div>
+                                        <div class="id-row">
+                                            <span class="id-label">TRACK</span>
+                                            <span class="id-value" id="id-track">UNASSIGNED</span>
+                                        </div>
+                                        <div class="id-row">
+                                            <span class="id-label">FACULTY</span>
+                                            <span class="id-value" id="id-faculty">—</span>
+                                        </div>
+                                        <div class="id-row">
+                                            <span class="id-label">ENLISTED</span>
+                                            <span class="id-value" id="id-date">—</span>
+                                        </div>
+                                        <div class="id-row">
+                                            <span class="id-label">CARD ID</span>
+                                            <span class="id-value mono" id="id-uid">CS-XXXX-XXXX</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="id-card-footer">
+                                    <div class="id-barcode" id="id-barcode"></div>
+                                    <div class="id-tagline">// PRESENT EVERYWHERE · SEEN NOWHERE</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="next-steps" id="next-steps">
+                            <h3>Three things happen now</h3>
+                            <ol class="next-steps-list">
+                                <li><strong>Save your ID card</strong> — right-click the card, save image. You'll need it on Discord.</li>
+                                <li><strong>Join Discord</strong> — that's where everything happens. Workshops, CTF announcements, write-ups, banter.</li>
+                                <li><strong>Show up Sunday</strong> — first weekly lab is your real intake. Easy. Friendly. Bring your laptop.</li>
+                            </ol>
+
+                            <div class="next-actions">
+                                <a href="#" class="btn-primary btn-lg" id="discord-invite-btn">
+                                    <span>Join Discord</span>
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </a>
+                                <button class="tool-btn" id="download-id-btn" type="button">📥 Download ID card</button>
+                                <button class="tool-btn ghost" id="restart-btn" type="button">↻ Start over</button>
+                            </div>
+
+                            <div class="confirmation-note" id="confirmation-note">
+                                <span class="status-dot"></span>
+                                <span>Confirmation also sent to your email (kept locally — this is a static demo, but the moment we hook up the backend, it'll send for real).</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo logo-lg">
+                        <img src="assets/logo.png" alt="CyberSpectre logo" class="logo-mark" width="48" height="48">
+                        <span class="logo-name">cyberspectre</span>
+                    </a>
+                    <p class="tagline-mark">// PRESENT EVERYWHERE. SEEN NOWHERE.</p>
+                    <p>MMU's elite cybersecurity collective — operating in the shadows, training in the open.</p>
+                </div>
+                <div class="footer-cols">
+                    <div class="fcol">
+                        <h5>Pages</h5>
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="programs.html">Programs</a>
+                        <a href="events.html">Events</a>
+                        <a href="tools.html">Tools</a>
+                        <a href="enlist.html">Enlist</a>
+                    </div>
+                    <div class="fcol">
+                        <h5>Operations</h5>
+                        <a href="programs.html#training">Training</a>
+                        <a href="programs.html#ctfs">CTFs</a>
+                        <a href="flags.html">Flag Hunt</a>
+                        <a href="faq.html">FAQ</a>
+                    </div>
+                    <div class="fcol">
+                        <h5>Channels</h5>
+                        <a href="#">Discord</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">GitHub</a>
+                        <a href="#">CTFtime</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 CyberSpectre — MMU Cybersecurity Club</p>
+                <p class="mono">// SECURE · DEFEND · WIN</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

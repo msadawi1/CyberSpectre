@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Solve to enter. CyberSpectre's recon challenge — decode the ciphers to unlock the hidden application form.">
+    <title>Recon — CyberSpectre</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body data-skip-boot="1">
+    <a href="#main" class="skip-link">Skip to content</a>
+    <div class="page">
+        <header class="topbar">
+            <div class="topbar-inner">
+                <a href="index.html" class="logo">
+                    <img src="assets/logo.png" alt="CyberSpectre logo" class="logo-mark" width="40" height="40">
+                    <span class="logo-name">cyberspectre</span>
+                </a>
+                <nav class="topnav" aria-label="Main">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="programs.html">Programs</a>
+                    <a href="events.html">Events</a>
+                    <a href="tools.html">Tools</a>
+                    <a href="enlist.html">Enlist</a>
+                </nav>
+                <div class="topbar-right">
+                    <div class="status-pill">
+                        <span class="status-dot" aria-hidden="true"></span>
+                        <span>INTAKE OPEN</span>
+                    </div>
+                    <a href="enlist.html" class="btn-primary btn-sm">
+                        <span>Enlist now</span>
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span><span></span>
+                </button>
+            </div>
+        </header>
+
+        <main id="main">
+            <section class="page-hero">
+                <div class="breadcrumb">
+                    <span class="home">~</span>
+                    <span class="sep">/</span>
+                    <a href="index.html">cyberspectre</a>
+                    <span class="sep">/</span>
+                    <span class="current">recon</span>
+                </div>
+                <div class="kicker"><span class="kicker-bar"></span>// CHALLENGE 00 · UNCLASSIFIED</div>
+                <h1 class="page-title">
+                    Three ciphers. <span class="hl-mono">One badge.</span>
+                    <span class="hl-italic">Solve to enter.</span>
+                </h1>
+                <p class="page-subtitle">Anyone can fill out a form. We want to see how you think. Decode the three challenges below to unlock the express application form. Hints provided. No prior experience required — Google is your friend.</p>
+            </section>
+
+            <section class="section">
+                <div class="recon-stage">
+
+                    <!-- PUZZLE 1 — Base64 -->
+                    <div class="recon-puzzle" data-puzzle="1" data-answer="ghost-protocol">
+                        <div class="rp-head">
+                            <span class="rp-tag">// 01 — BASE64</span>
+                            <span class="rp-difficulty">EASY</span>
+                        </div>
+                        <p class="rp-prompt">We intercepted this transmission. It's encoded with a common scheme used everywhere on the internet. Decode it.</p>
+                        <code class="rp-cipher">Z2hvc3QtcHJvdG9jb2w=</code>
+                        <div class="rp-input-row">
+                            <input class="rp-input" type="text" placeholder="enter decoded answer..." autocomplete="off" spellcheck="false">
+                            <button class="rp-submit" type="button">SUBMIT</button>
+                        </div>
+                        <div class="rp-feedback"></div>
+                        <p class="rp-hint">// hint: try <code>echo "..." | base64 -d</code> or paste it into any online base64 decoder.</p>
+                    </div>
+
+                    <!-- PUZZLE 2 — Caesar shift -->
+                    <div class="recon-puzzle" data-puzzle="2" data-answer="cyberspectre" data-shift="3">
+                        <div class="rp-head">
+                            <span class="rp-tag">// 02 — CAESAR CIPHER</span>
+                            <span class="rp-difficulty">EASY</span>
+                        </div>
+                        <p class="rp-prompt">A shift cipher. Each letter moved a fixed number of places in the alphabet. Find the shift, recover the message.</p>
+                        <code class="rp-cipher">FBEHUVSHFWUH</code>
+                        <div class="rp-input-row">
+                            <input class="rp-input" type="text" placeholder="enter decoded answer..." autocomplete="off" spellcheck="false">
+                            <button class="rp-submit" type="button">SUBMIT</button>
+                        </div>
+                        <div class="rp-feedback"></div>
+                        <p class="rp-hint">// hint: shift each letter back by <code>3</code> positions. <code>F → C, B → Y</code>...</p>
+                    </div>
+
+                    <!-- PUZZLE 3 — Hex to ASCII -->
+                    <div class="recon-puzzle" data-puzzle="3" data-answer="seen nowhere">
+                        <div class="rp-head">
+                            <span class="rp-tag">// 03 — HEX → ASCII</span>
+                            <span class="rp-difficulty">MEDIUM</span>
+                        </div>
+                        <p class="rp-prompt">Half of our tagline. Encoded as hexadecimal bytes. Convert to ASCII to see the message.</p>
+                        <code class="rp-cipher">73 65 65 6e 20 6e 6f 77 68 65 72 65</code>
+                        <div class="rp-input-row">
+                            <input class="rp-input" type="text" placeholder="enter decoded answer..." autocomplete="off" spellcheck="false">
+                            <button class="rp-submit" type="button">SUBMIT</button>
+                        </div>
+                        <div class="rp-feedback"></div>
+                        <p class="rp-hint">// hint: <code>0x73 = 's'</code> in ASCII. Convert each pair, ignore spaces.</p>
+                    </div>
+
+                    <!-- UNLOCKED -->
+                    <div class="recon-unlocked" id="recon-unlocked">
+                        <div class="ru-badge">
+                            <span class="status-dot"></span>
+                            <span>BADGE UNLOCKED · RECON_INITIATE</span>
+                        </div>
+                        <h2 class="ru-title">
+                            Three for three. <span class="hl-italic">Welcome.</span>
+                        </h2>
+                        <p class="ru-text">You decoded all three. That's the entire entry barrier. Bring this badge to your application — we'll know.</p>
+                        <div class="qr-actions">
+                            <a href="join.html#contact?badge=recon_initiate" class="btn-primary btn-lg">
+                                <span>Apply with badge</span>
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </a>
+                            <a href="quiz.html" class="btn-ghost btn-lg">
+                                <span>Take the archetype quiz</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo logo-lg">
+                        <img src="assets/logo.png" alt="CyberSpectre logo" class="logo-mark" width="48" height="48">
+                        <span class="logo-name">cyberspectre</span>
+                    </a>
+                    <p class="tagline-mark">// PRESENT EVERYWHERE. SEEN NOWHERE.</p>
+                    <p>MMU's elite cybersecurity collective — operating in the shadows, training in the open.</p>
+                </div>
+                <div class="footer-cols">
+                    <div class="fcol">
+                        <h5>Pages</h5>
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="programs.html">Programs</a>
+                        <a href="events.html">Events</a>
+                        <a href="join.html">Join</a>
+                    </div>
+                    <div class="fcol">
+                        <h5>Operations</h5>
+                        <a href="programs.html#training">Training</a>
+                        <a href="programs.html#ctfs">CTFs</a>
+                        <a href="faq.html">FAQ</a>
+                        <a href="join.html#contact">Contact</a>
+                    </div>
+                    <div class="fcol">
+                        <h5>Channels</h5>
+                        <a href="#">Discord</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">GitHub</a>
+                        <a href="#">CTFtime</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 CyberSpectre — MMU Cybersecurity Club</p>
+                <p class="mono">// SECURE · DEFEND · WIN</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const solved = new Set();
+
+        document.querySelectorAll('.recon-puzzle').forEach(p => {
+            const input = p.querySelector('.rp-input');
+            const submit = p.querySelector('.rp-submit');
+            const feedback = p.querySelector('.rp-feedback');
+            const expected = (p.dataset.answer || '').toLowerCase().trim();
+            const id = p.dataset.puzzle;
+
+            const tryAnswer = () => {
+                const v = input.value.toLowerCase().trim();
+                if (!v) {
+                    feedback.className = 'rp-feedback fail';
+                    feedback.textContent = '[!] empty submission.';
+                    return;
+                }
+                if (v === expected) {
+                    feedback.className = 'rp-feedback success';
+                    feedback.textContent = '[+] correct. flag captured.';
+                    solved.add(id);
+                    p.style.borderColor = 'rgba(74, 222, 128, 0.4)';
+                    submit.disabled = true;
+                    input.disabled = true;
+                    if (solved.size === document.querySelectorAll('.recon-puzzle').length) {
+                        const unlocked = document.getElementById('recon-unlocked');
+                        unlocked.classList.add('shown');
+                        setTimeout(() => unlocked.scrollIntoView({ behavior: 'smooth', block: 'center' }), 200);
+                    }
+                } else {
+                    feedback.className = 'rp-feedback fail';
+                    feedback.textContent = '[!] not quite. try again.';
+                    input.focus();
+                    input.select();
+                }
+            };
+
+            submit.addEventListener('click', tryAnswer);
+            input.addEventListener('keydown', e => { if (e.key === 'Enter') tryAnswer(); });
+            // Clear stale feedback as soon as user starts editing
+            input.addEventListener('input', () => {
+                if (feedback.className.includes('fail')) {
+                    feedback.className = 'rp-feedback';
+                    feedback.textContent = '';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

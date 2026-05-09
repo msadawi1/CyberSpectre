@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CyberSpectre Hacker Tools Hub — Base64, Caesar, ROT13, Hex, URL encoding, SHA-256 hashing. Built for CTFs, learning, and quick decodes.">
+    <title>Tools — CyberSpectre</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <!-- flag{recon_pays_off_check_tools} -->
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    <div class="page">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+            <div class="topbar-inner">
+                <a href="index.html" class="logo">
+                    <img src="assets/logo.png" alt="CyberSpectre logo" class="logo-mark" width="40" height="40">
+                    <span class="logo-name">cyberspectre</span>
+                </a>
+                <nav class="topnav" aria-label="Main">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="programs.html">Programs</a>
+                    <a href="events.html">Events</a>
+                    <a href="tools.html" class="active">Tools</a>
+                    <a href="enlist.html">Enlist</a>
+                </nav>
+                <div class="topbar-right">
+                    <div class="status-pill">
+                        <span class="status-dot"></span>
+                        <span>INTAKE OPEN</span>
+                    </div>
+                    <a href="enlist.html" class="btn-primary btn-sm">
+                        <span>Enlist now</span>
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span><span></span>
+                </button>
+            </div>
+        </header>
+
+        <main id="main">
+            <!-- PAGE HERO -->
+            <section class="page-hero">
+                <div class="page-hero-inner">
+                    <div class="breadcrumb">
+                        <a href="index.html">cyberspectre</a>
+                        <span class="sep">/</span>
+                        <span class="current">tools</span>
+                    </div>
+                    <div class="kicker"><span class="kicker-bar"></span>// FILE 09 — HACKER TOOLKIT</div>
+                    <h1 class="page-title">
+                        Your <span class="hl-mono">arsenal</span>
+                        of <span class="hl-italic">decoders.</span>
+                    </h1>
+                    <p class="page-subtitle">Quick CTF helpers — encode and decode in one place. Built into the website so you never have to leave when you're solving challenges.</p>
+                </div>
+            </section>
+
+            <!-- TOOLS GRID -->
+            <section class="section">
+                <div class="section-inner">
+                    <div class="tools-grid">
+
+                        <!-- BASE64 -->
+                        <div class="tool-card" data-tool="base64">
+                            <div class="tool-head">
+                                <div>
+                                    <span class="tool-tag">// 01</span>
+                                    <h3 class="tool-title">Base64</h3>
+                                </div>
+                                <span class="tool-icon">🅱️</span>
+                            </div>
+                            <p class="tool-desc">Encode plain text to Base64 or decode Base64 back to text. Most common encoding in CTFs.</p>
+                            <textarea class="tool-input" id="b64-input" placeholder="Type or paste here..." rows="3"></textarea>
+                            <div class="tool-actions">
+                                <button class="tool-btn primary" data-action="b64-encode">Encode</button>
+                                <button class="tool-btn" data-action="b64-decode">Decode</button>
+                                <button class="tool-btn ghost" data-action="b64-copy">Copy</button>
+                            </div>
+                            <div class="tool-output" id="b64-output">→ output appears here</div>
+                        </div>
+
+                        <!-- CAESAR -->
+                        <div class="tool-card" data-tool="caesar">
+                            <div class="tool-head">
+                                <div>
+                                    <span class="tool-tag">// 02</span>
+                                    <h3 class="tool-title">Caesar Cipher</h3>
+                                </div>
+                                <span class="tool-icon">🏛️</span>
+                            </div>
+                            <p class="tool-desc">Shift each letter by N positions. Try shift=3 for classic Caesar, or click "Brute force" to see all 25 shifts.</p>
+                            <textarea class="tool-input" id="caesar-input" placeholder="Type or paste here..." rows="2"></textarea>
+                            <label class="tool-label">Shift: <span id="caesar-shift-value">3</span></label>
+                            <input type="range" id="caesar-shift" class="tool-range" min="0" max="25" value="3">
+                            <div class="tool-actions">
+                                <button class="tool-btn primary" data-action="caesar-shift">Shift</button>
+                                <button class="tool-btn" data-action="caesar-bruteforce">Brute force all 25</button>
+                                <button class="tool-btn ghost" data-action="caesar-copy">Copy</button>
+                            </div>
+                            <div class="tool-output" id="caesar-output">→ output appears here</div>
+                        </div>
+
+                        <!-- ROT13 -->
+                        <div class="tool-card" data-tool="rot13">
+                            <div class="tool-head">
+                                <div>
+                                    <span class="tool-tag">// 03</span>
+                                    <h3 class="tool-title">ROT13</h3>
+                                </div>
+                                <span class="tool-icon">🔁</span>
+                            </div>
+                            <p class="tool-desc">Caesar with shift=13. Apply twice to get the original. Beloved by CTF authors for "easy" challenges.</p>
+                            <textarea class="tool-input" id="rot13-input" placeholder="Type or paste here..." rows="2"></textarea>
+                            <div class="tool-actions">
+                                <button class="tool-btn primary" data-action="rot13-go">ROT13</button>
+                                <button class="tool-btn ghost" data-action="rot13-copy">Copy</button>
+                            </div>
+                            <div class="tool-output" id="rot13-output">→ output appears here</div>
+                        </div>
+
+                        <!-- HEX -->
+                        <div class="tool-card" data-tool="hex">
+                            <div class="tool-head">
+                                <div>
+                                    <span class="tool-tag">// 04</span>
+                                    <h3 class="tool-title">Hex ⇄ Text</h3>
+                                </div>
+                                <span class="tool-icon">🔢</span>
+                            </div>
+                            <p class="tool-desc">Convert plain text to hexadecimal or vice versa. Useful when you see <code>48656c6c6f</code> in a challenge.</p>
+                            <textarea class="tool-input" id="hex-input" placeholder="Type text or hex (with or without spaces)..." rows="2"></textarea>
+                            <div class="tool-actions">
+                                <button class="tool-btn primary" data-action="hex-encode">Text → Hex</button>
+                                <button class="tool-btn" data-action="hex-decode">Hex → Text</button>
+                                <button class="tool-btn ghost" data-action="hex-copy">Copy</button>
+                            </div>
+                            <div class="tool-output" id="hex-output">→ output appears here</div>
+                        </div>
+
+                        <!-- URL ENCODING -->
+                        <div class="tool-card" data-tool="url">
+                            <div class="tool-head">
+                                <div>
+                                    <span class="tool-tag">// 05</span>
+                                    <h3 class="tool-title">URL Encode</h3>
+                                </div>
+                                <span class="tool-icon">🔗</span>
+                            </div>
+                            <p class="tool-desc">Convert special characters to <code>%20</code>-style encoding for URLs. Critical when crafting Burp payloads.</p>
+                            <textarea class="tool-input" id="url-input" placeholder="Type or paste here..." rows="2"></textarea>
+                            <div class="tool-actions">
+                                <button class="tool-btn primary" data-action="url-encode">Encode</button>
+                                <button class="tool-btn" data-action="url-decode">Decode</button>
+                                <button class="tool-btn ghost" data-action="url-copy">Copy</button>
+                            </div>
+                            <div class="tool-output" id="url-output">→ output appears here</div>
+                        </div>
+
+                        <!-- HASH -->
+                        <div class="tool-card" data-tool="hash">
+                            <div class="tool-head">
+                                <div>
+                                    <span class="tool-tag">// 06</span>
+                                    <h3 class="tool-title">SHA-256 Hash</h3>
+                                </div>
+                                <span class="tool-icon">🔐</span>
+                            </div>
+                            <p class="tool-desc">Generate a SHA-256 hash of any string. One-way function — you can hash, but you can't unhash.</p>
+                            <textarea class="tool-input" id="hash-input" placeholder="Type or paste here..." rows="2"></textarea>
+                            <div class="tool-actions">
+                                <button class="tool-btn primary" data-action="hash-go">Hash</button>
+                                <button class="tool-btn ghost" data-action="hash-copy">Copy</button>
+                            </div>
+                            <div class="tool-output mono" id="hash-output">→ hash appears here</div>
+                        </div>
+
+                        <!-- BINARY -->
+                        <div class="tool-card" data-tool="binary">
+                            <div class="tool-head">
+                                <div>
+                                    <span class="tool-tag">// 07</span>
+                                    <h3 class="tool-title">Binary ⇄ Text</h3>
+                                </div>
+                                <span class="tool-icon">0️⃣1️⃣</span>
+                            </div>
+                            <p class="tool-desc">Convert plain text to <code>01001000 01101001</code> or back. Common low-level CTF encoding.</p>
+                            <textarea class="tool-input" id="bin-input" placeholder="Type text or binary..." rows="2"></textarea>
+                            <div class="tool-actions">
+                                <button class="tool-btn primary" data-action="bin-encode">Text → Binary</button>
+                                <button class="tool-btn" data-action="bin-decode">Binary → Text</button>
+                                <button class="tool-btn ghost" data-action="bin-copy">Copy</button>
+                            </div>
+                            <div class="tool-output mono" id="bin-output">→ output appears here</div>
+                        </div>
+
+                        <!-- REVERSE -->
+                        <div class="tool-card" data-tool="reverse">
+                            <div class="tool-head">
+                                <div>
+                                    <span class="tool-tag">// 08</span>
+                                    <h3 class="tool-title">Reverse Text</h3>
+                                </div>
+                                <span class="tool-icon">↩️</span>
+                            </div>
+                            <p class="tool-desc">Flip a string backwards. Sometimes flags are just hidden in reverse — always check.</p>
+                            <textarea class="tool-input" id="rev-input" placeholder="Type or paste here..." rows="2"></textarea>
+                            <div class="tool-actions">
+                                <button class="tool-btn primary" data-action="rev-go">Reverse</button>
+                                <button class="tool-btn ghost" data-action="rev-copy">Copy</button>
+                            </div>
+                            <div class="tool-output" id="rev-output">→ output appears here</div>
+                        </div>
+
+                    </div>
+
+                    <!-- TIP CALLOUT -->
+                    <div class="tools-tip">
+                        <div class="tip-icon">💡</div>
+                        <div>
+                            <strong>Pro tip:</strong> Try chaining tools. Many CTF challenges layer multiple encodings — Base64 of ROT13 of Hex, for example. Decode each layer until you hit a flag.
+                        </div>
+                    </div>
+
+                    <!-- HIDDEN CHALLENGE -->
+                    <div class="tools-challenge">
+                        <span class="challenge-tag">// MICRO-CHALLENGE</span>
+                        <h3>What does this decode to?</h3>
+                        <code class="challenge-code">Q3liZXJTcGVjdHJlIGlzIHJlY3J1aXRpbmcgaW4gQXVndXN0LiBmbGFne3NoYXJwX2V5ZXNfb3Blbn0=</code>
+                        <p class="challenge-hint">Hint: it's encoded with one of the tools above. Decode it. The flag inside counts toward your <a href="flags.html">CTF score</a>.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <section class="section">
+                <div class="cta-card">
+                    <h3>Want more tools? <span class="hl-italic">Suggest one in Discord.</span></h3>
+                    <p>We add tools members actually use. If you keep reaching for an encoder/decoder we don't have, tell us and we'll add it.</p>
+                    <div class="cta-actions">
+                        <a href="join.html" class="btn-primary btn-lg">
+                            <span>Join Discord</span>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo logo-lg">
+                        <img src="assets/logo.png" alt="CyberSpectre logo" class="logo-mark" width="48" height="48">
+                        <span class="logo-name">cyberspectre</span>
+                    </a>
+                    <p class="tagline-mark">// PRESENT EVERYWHERE. SEEN NOWHERE.</p>
+                    <p>MMU's elite cybersecurity collective — operating in the shadows, training in the open.</p>
+                </div>
+                <div class="footer-cols">
+                    <div class="fcol">
+                        <h5>Pages</h5>
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="programs.html">Programs</a>
+                        <a href="events.html">Events</a>
+                        <a href="tools.html">Tools</a>
+                        <a href="join.html">Join</a>
+                    </div>
+                    <div class="fcol">
+                        <h5>Operations</h5>
+                        <a href="programs.html#training">Training</a>
+                        <a href="programs.html#ctfs">CTFs</a>
+                        <a href="flags.html">Flag Hunt</a>
+                        <a href="faq.html">FAQ</a>
+                    </div>
+                    <div class="fcol">
+                        <h5>Channels</h5>
+                        <a href="#">Discord</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">GitHub</a>
+                        <a href="#">CTFtime</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 CyberSpectre — MMU Cybersecurity Club</p>
+                <p class="mono">// SECURE · DEFEND · WIN</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
