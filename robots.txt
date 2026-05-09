@@ -1,0 +1,12 @@
+# CyberSpectre — robots.txt
+# If you found this, you're already thinking like a hacker.
+
+User-agent: *
+Allow: /
+
+# A flag for the curious recon-er:
+# flag{robots_dot_txt_is_open_intel}
+
+# Disallow nothing. We hide nothing on this site that needs to be hidden.
+# But if you ever find a real misconfiguration on a real site,
+# DO NOT exploit it. Report it. That's the way.
