@@ -8,5 +8,5 @@ export default defineConfig({
             '@': path.resolve(__dirname, './src'),
         },
     },
-    base: '/CyberSpectre'
+    base: '/CyberSpectre/'
 });
