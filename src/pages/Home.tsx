@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import { SITE } from '../constants';
+//  @ts-ignore
+import logo from '../../assets/logo.png';
 
 export default function Home() {
   return (
@@ -8,7 +10,7 @@ export default function Home() {
       <section className="relative pt-32 pb-20 px-6 text-center overflow-hidden">
         <div className="max-w-[880px] mx-auto relative z-10">
           <img
-            src="/assets/logo.png"
+            src={logo}
             alt="CyberSpectre logo"
             className="w-[140px] md:w-[180px] mx-auto mb-6"
           />

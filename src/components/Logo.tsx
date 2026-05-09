@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import { SITE } from '../constants';
+//  @ts-ignore
+import logo from '../../assets/logo.png';
 
 interface LogoProps {
   size?: number;
@@ -11,7 +13,7 @@ export default function Logo({ size = 40, showName = true, className = '' }: Log
   return (
     <Link to="/" className={`inline-flex items-center gap-2 ${className}`}>
       <img
-        src="/assets/logo.png"
+        src={logo}
         alt={`${SITE.name} logo`}
         width={size}
         height={size}
